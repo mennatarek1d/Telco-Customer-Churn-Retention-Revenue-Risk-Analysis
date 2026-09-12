@@ -1,5 +1,4 @@
 # Telco-Customer-Churn-Retention-Revenue-Risk-Analysis
-# Telco Customer Churn — Retention & Revenue Risk Analysis
 
 Analysis of 7,043 telecom customers to identify churn drivers and quantify revenue at risk.
 
