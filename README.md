@@ -9,8 +9,9 @@ Overall churn is **26.5%**, driven almost entirely by month-to-month contracts (
 A telecommunications company is experiencing customer churn and wants to understand which customers are most likely to leave and where the retention team should focus its efforts. The company needs to identify the customer segments with the highest churn rates, understand the characteristics associated with churn, determine when customers are most vulnerable, and quantify the revenue exposure associated with customer attrition.
 
 ## Technical Implementation
-**Python (Pandas):** data cleaning, type coercion, reusable segment-aggregation function, tenure binning, multi-key crosstabs
-**Matplotlib:** labeled/color-coded bar and pie charts, contract × tenure interaction chart
+**Python (Pandas):** data cleaning, type coercion, reusable segment-aggregation function, tenure binning, multi-key crosstabs.
+
+**Matplotlib:** labeled/color-coded bar and pie charts, contract × tenure interaction chart.
 
 ## Key Findings
 | Metric | Value |
