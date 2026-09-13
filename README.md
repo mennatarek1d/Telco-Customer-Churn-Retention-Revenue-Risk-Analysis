@@ -26,16 +26,13 @@ A telecommunications company is experiencing customer churn and wants to underst
 ## Key Insights
 
 **Contract type is the dominant driver** — no other variable tested comes close to the gap between month-to-month and two-year contracts.
-<img width="1088" height="642" alt="Churn rate by contract type" src="https://github.com/user-attachments/assets/20d09d0e-5daa-47e1-baae-2c75aacea095" />
+<img width="500" height="500" alt="Churn rate by contract type" src="https://github.com/user-attachments/assets/20d09d0e-5daa-47e1-baae-2c75aacea095" />
 
 **The tenure effect isn't independent** — it's almost entirely explained by new customers being disproportionately month-to-month. Annual-contract customers stay low-risk regardless of how new they are.
 <img width="1308" height="733" alt="Churn rate by tenure group, split by contract type" src="https://github.com/user-attachments/assets/678266ee-aa62-4c20-be29-184ac324c702" />
 
 **Payment method is a red flag worth investigating** — the gap is large enough to suggest a billing or payment-experience issue, not just a customer-profile difference.
 <img width="766" height="242" alt="Churn rate by payment method" src="https://github.com/user-attachments/assets/a26c2afd-d276-4808-ab1e-f17932453622" />
-
-**Add-on services likely overlap with contract type** rather than acting as an independent cause — customers without Online Security/Tech Support are disproportionately month-to-month.
-<img width="1067" height="643" alt="Churn rate by Online Security and Tech Support status" src="https://github.com/user-attachments/assets/8456ff1a-5c79-475c-9312-a2b52a302575" />
 
 **Demographics aren't useful churn signals** — gender and phone service showed no meaningful difference, so they're not worth targeting in retention efforts.
 <table>
