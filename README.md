@@ -32,8 +32,11 @@ A telecommunications company is experiencing customer churn and wants to underst
 <img width="1308" height="733" alt="Churn rate by tenure group, split by contract type" src="https://github.com/user-attachments/assets/678266ee-aa62-4c20-be29-184ac324c702" />
 
 **Payment method is a red flag worth investigating** — the gap is large enough to suggest a billing or payment-experience issue, not just a customer-profile difference.
-<img width="766" height="242" alt="Churn rate by payment method" src="https://github.com/user-attachments/assets/a26c2afd-d276-4808-ab1e-f17932453622" />
-
+<table>
+  <tr>
+<img width="500" height="500" alt="Churn rate by payment method" src="https://github.com/user-attachments/assets/a26c2afd-d276-4808-ab1e-f17932453622" />
+  </tr>
+</table>
 **Demographics aren't useful churn signals** — gender and phone service showed no meaningful difference, so they're not worth targeting in retention efforts.
 <table>
   <tr>
