@@ -1,20 +1,12 @@
-# Telco-Customer-Churn-Retention-Revenue-Risk-Analysis
+# Telco Customer Churn — Retention & Revenue Risk Analysis
 
-Analysis of 7,043 telecom customers to identify churn drivers and quantify revenue at risk.
+Analysis telecom customers to identify churn drivers and quantify revenue at risk.
 
 ## Executive Summary
 Overall churn is **26.5%**, driven almost entirely by month-to-month contracts (**42.7%** churn vs. **2.8%** for two-year contracts). Churned customers account for **17.8%** of historical revenue (~£2.86M of ~£16.06M). New, month-to-month customers are the highest-risk segment.
 
 ## Business Problem
-
-A telecommunications company is experiencing customer churn and wants to understand which customers are most likely to leave and where the retention team should focus its efforts.
-
-The company needs to identify the customer segments with the highest churn rates, understand the characteristics associated with churn, determine when customers are most vulnerable, and quantify the revenue exposure associated with customer attrition.
-
-## Business Priorities
-- Migrate month-to-month customers to annual contracts, starting with those in their first 6 months
-- Investigate the electronic check payment flow (churn nearly 2x other methods)
-- Bundle Online Security / Tech Support into onboarding
+A telecommunications company is experiencing customer churn and wants to understand which customers are most likely to leave and where the retention team should focus its efforts. The company needs to identify the customer segments with the highest churn rates, understand the characteristics associated with churn, determine when customers are most vulnerable, and quantify the revenue exposure associated with customer attrition.
 
 ## Technical Implementation
 **Python (Pandas):** data cleaning, type coercion, reusable segment-aggregation function, tenure binning, multi-key crosstabs
@@ -32,32 +24,31 @@ The company needs to identify the customer segments with the highest churn rates
 | Churned revenue share | 17.8% (~£2.86M of ~£16.06M) |
 
 ## Key Insights
-- **Contract type dominates** — 42.7% vs. 2.8% is the largest gap of any variable tested
-  <img width="1088" height="642" alt="image" src="https://github.com/user-attachments/assets/20d09d0e-5daa-47e1-baae-2c75aacea095" />
 
-- **Tenure risk is driven by contract type**, not tenure alone — annual-contract customers stay low-risk at every tenure length
-  <img width="1308" height="733" alt="image" src="https://github.com/user-attachments/assets/678266ee-aa62-4c20-be29-184ac324c702" />
+**Contract type is the dominant driver** — no other variable tested comes close to the gap between month-to-month and two-year contracts.
+<img width="1088" height="642" alt="Churn rate by contract type" src="https://github.com/user-attachments/assets/20d09d0e-5daa-47e1-baae-2c75aacea095" />
 
-- **Electronic check is a red flag** — nearly 2x the churn of other payment methods
-  <img width="766" height="242" alt="image" src="https://github.com/user-attachments/assets/a26c2afd-d276-4808-ab1e-f17932453622" />
+**The tenure effect isn't independent** — it's almost entirely explained by new customers being disproportionately month-to-month. Annual-contract customers stay low-risk regardless of how new they are.
+<img width="1308" height="733" alt="Churn rate by tenure group, split by contract type" src="https://github.com/user-attachments/assets/678266ee-aa62-4c20-be29-184ac324c702" />
 
-- **Missing add-ons correlate with churn** (~42%), but likely overlap with the month-to-month segment rather than acting independently
-  <img width="1067" height="643" alt="image" src="https://github.com/user-attachments/assets/8456ff1a-5c79-475c-9312-a2b52a302575" />
+**Payment method is a red flag worth investigating** — the gap is large enough to suggest a billing or payment-experience issue, not just a customer-profile difference.
+<img width="766" height="242" alt="Churn rate by payment method" src="https://github.com/user-attachments/assets/a26c2afd-d276-4808-ab1e-f17932453622" />
 
-- **Demographics (gender, phone service) don't matter** — no meaningful churn difference
+**Add-on services likely overlap with contract type** rather than acting as an independent cause — customers without Online Security/Tech Support are disproportionately month-to-month.
+<img width="1067" height="643" alt="Churn rate by Online Security and Tech Support status" src="https://github.com/user-attachments/assets/8456ff1a-5c79-475c-9312-a2b52a302575" />
+
+**Demographics aren't useful churn signals** — gender and phone service showed no meaningful difference, so they're not worth targeting in retention efforts.
 <table>
   <tr>
-    <td width="50%"><img src="<img width="585" height="195" alt="image" src="https://github.com/user-attachments/assets/a9763bae-8853-4336-90d5-47019aa4f79c" />
-" alt="late_orders2017"></td>
-    <td width="50%"><img src="<img width="588" height="192" alt="image" src="https://github.com/user-attachments/assets/485e43fc-0241-441d-9e6a-3a6b6dc2cbb9" />
-" alt="late_orders2018"></td>
+    <td width="50%"><img src="https://github.com/user-attachments/assets/a9763bae-8853-4336-90d5-47019aa4f79c" alt="Churn rate by gender"></td>
+    <td width="50%"><img src="https://github.com/user-attachments/assets/485e43fc-0241-441d-9e6a-3a6b6dc2cbb9" alt="Churn rate by phone service"></td>
   </tr>
 </table>
 
 ## Recommendations
-1. **Contract migration campaign** — discounted annual-plan offers for month-to-month customers, prioritizing early tenure
-2. **Audit electronic check billing** — check for friction, failed payments, or lack of autopay
-3. **Bundle security/support at signup** — free trial for new customers
+1. **Contract migration campaign** — discounted annual-plan offers for month-to-month customers, prioritizing those in their first 6 months of tenure
+2. **Audit electronic check billing** — check for friction, failed payments, or lack of autopay enrollment
+3. **Bundle security/support at signup** — free trial period for new customers, since this segment overlaps with high-risk accounts
 4. **Build a predictive risk score** — next step: logistic regression or gradient boosting for per-customer churn probability
 
 ## Open Questions
