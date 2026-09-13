@@ -34,7 +34,7 @@ A telecommunications company is experiencing customer churn and wants to underst
 **Payment method is a red flag worth investigating** — the gap is large enough to suggest a billing or payment-experience issue, not just a customer-profile difference.
 <table>
   <tr>
-<img width="500" height="500" alt="Churn rate by payment method" src="https://github.com/user-attachments/assets/a26c2afd-d276-4808-ab1e-f17932453622" />
+<img width="500" height="300" alt="Churn rate by payment method" src="https://github.com/user-attachments/assets/a26c2afd-d276-4808-ab1e-f17932453622" />
   </tr>
 </table>
 **Demographics aren't useful churn signals** — gender and phone service showed no meaningful difference, so they're not worth targeting in retention efforts.
@@ -51,16 +51,17 @@ A telecommunications company is experiencing customer churn and wants to underst
 3. **Bundle security/support at signup** — free trial period for new customers, since this segment overlaps with high-risk accounts
 4. **Build a predictive risk score** — next step: logistic regression or gradient boosting for per-customer churn probability
 
-## Open Questions
-Whether add-on services drive churn independently of contract type is unconfirmed — would need a multivariate model to isolate the effect. The electronic check churn gap's root cause (pricing, UX, failed payments) can't be determined from this data alone.
+## next step
+visual the whole data using excel using pivottable
 
 ## Repo Structure
 ```
 ├── README.md
-├── churn_customer_improved.ipynb
+├── code/
+     └──churn_customer_improved.ipynb
 └── data/
     └── WA_Fn-UseC_-Telco-Customer-Churn.csv
 ```
 
 ## Author
-[Your Name]
+[Menna_Tarek]
